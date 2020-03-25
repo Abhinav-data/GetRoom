@@ -1,4 +1,4 @@
-const mongoose = require("nomgoose");
+const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
 
 const roomSchema = new mongoose.Schema(
@@ -21,7 +21,7 @@ const roomSchema = new mongoose.Schema(
       trim: true,
       maxlength: 32
     },
-    category: {
+    city: {
       type: ObjectId,
       ref: "City",
       required: true

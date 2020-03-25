@@ -10,6 +10,7 @@ var cors = require("cors");
 const authRoutes = require("./routes/auth.js");
 const userRoutes = require("./routes/user.js");
 const cityRoutes = require("./routes/city.js");
+const roomRoutes = require("./routes/room.js");
 
 //DB connection...................
 mongoose
@@ -32,6 +33,7 @@ app.use(cors());
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", cityRoutes);
+app.use("/api", roomRoutes);
 
 //PORT.....................................
 const port = process.env.PORT || 5000;

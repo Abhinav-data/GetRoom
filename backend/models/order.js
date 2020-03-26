@@ -18,6 +18,11 @@ const OrderSchema = new mongoose.Schema(
     transaction_id: {},
     amount: { type: Number },
     updated: Date,
+    status: {
+      type: String,
+      default: "",
+      enums: ["Booked", "Cancelled"]
+    },
     user: {
       type: ObjectId,
       ref: "User"

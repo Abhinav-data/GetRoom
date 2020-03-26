@@ -11,6 +11,7 @@ const authRoutes = require("./routes/auth.js");
 const userRoutes = require("./routes/user.js");
 const cityRoutes = require("./routes/city.js");
 const roomRoutes = require("./routes/room.js");
+const orderRoutes = require("./routes/order.js");
 
 //DB connection...................
 mongoose
@@ -34,6 +35,7 @@ app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", cityRoutes);
 app.use("/api", roomRoutes);
+app.use("/api", orderRoutes);
 
 //PORT.....................................
 const port = process.env.PORT || 5000;
